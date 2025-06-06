@@ -25,7 +25,9 @@ This project, "Lynda Library Project", is designed for library data analysis and
 ### Database Setup
 1.  Ensure you have a MySQL server running.
 2.  Create a database named `library`.
-3.  The necessary tables (`books`, `patrons`, `loans`) and their schema can be inferred from the queries in `Lynda Library Proejct.sql` and the data interaction in `Lynda Library Proejct.ipynb`. You will need to create these tables and populate them with your library data. The notebook connects using `host = "localhost", username="root", password="MINA@123456789", database = "library", port=3306`. You may need to adjust these connection parameters.
+3.  The necessary tables (`books`, `patrons`, `loans`) and their schema can be inferred from the queries in `Lynda Library Proejct.sql` and the data interaction in `Lynda Library Proejct.ipynb`. You will need to create these tables and populate them with your library data. The notebook connects to the database using parameters like host, username, password, database name, and port. An example connection string used in the notebook is `host = "localhost", username="root", database = "library", port=3306`. You will need to provide your own credentials.
+
+**Important Security Note:** It is strongly recommended *not* to hardcode your database password directly in the notebook or any script. Instead, use secure methods like environment variables, a configuration file that is not committed to version control, or a secrets management system to handle your database credentials.
 
 ### Running the Notebook
 1.  Update the database connection details in the second cell of the `Lynda Library Proejct.ipynb` notebook if they differ from your setup.
